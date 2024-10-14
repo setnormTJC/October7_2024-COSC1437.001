@@ -28,14 +28,20 @@ public:
 /*Vehicle will be the PARENT/BASE classe of some other, "derived"/children classes*/
 class Vehicle
 {
-    string cargoName; //like a person, cargo containers 
-    double cargoPayload; //ex: how many pounds (kgs?) 
+    string cargoName = "Cargo TBD"; //like a person, cargo containers 
+    double cargoPayload = 0.00; //ex: how many pounds (kgs?) 
 
-    double massOfVehicle; 
+    double massOfVehicle = 0.00; 
 
-    int maxSpeed; 
+    int maxSpeed = -999; 
 
 public: 
+
+    Vehicle()
+    {
+        //nothing!
+    }
+
     Vehicle(string cargoName, double cargoPayload, double massOfVehicle, int maxSpeed)
         :cargoName(cargoName), cargoPayload(cargoPayload), massOfVehicle(massOfVehicle), maxSpeed(maxSpeed)
     {
@@ -74,7 +80,16 @@ public:
     Airplane(string cargoName, double cargoPayload, double massOfVehicle, int maxSpeed, 
         bool isJetEngine, double wingSpan)
 
-    : Vehicle(cargoName, cargoPayload, massOfVehicle, maxSpeed), isJetEngine(isJetEngine), wingSpan(wingSpan) {}
+    : Vehicle(cargoName, cargoPayload, massOfVehicle, maxSpeed), isJetEngine(isJetEngine), wingSpan(wingSpan) 
+    {
+        //empty?!
+    }
+
+    Airplane(bool isJetEngine, double wingSpan)
+        :isJetEngine(isJetEngine), wingSpan(wingSpan)
+    {
+
+    }
 
     /*This print function will OVERRIDE the parent class's (Vehicle) print function*/
     void print() //override
@@ -91,14 +106,18 @@ public:
 int main()
 {
 
-    Vehicle someGenericVehicle{ "shoes", 111.11, 2222.22, 10 };
-    cout << "The GENERIC vehicle attributes:\n";
-    someGenericVehicle.print(); 
+    Vehicle someBoat{ "boat", 1111.11, 2222.22, 15 };
+    //cout << "The GENERIC vehicle attributes:\n";
+    //someBoat.print(); 
 
-    cout << "\n\n\nThe Cessna 150 attributes:\n";
+    cout << "Attributes of the jet airplane object:\n";
+    Airplane someJetAirplane{ true, 250.2 };
+    someJetAirplane.print(); 
 
-    Airplane cessna150{ "people and not much else!", 450.00, 3'000.50, 80, false, 35.5 };
-    cessna150.print(); 
+    //cout << "\n\n\nThe Cessna 150 attributes:\n";
+
+    //Airplane cessna150{ "people and not much else!", 450.00, 3'000.50, 80, false, 35.5 };
+    //cessna150.print(); 
 
     //Employee employeeOfTheMonth; 
     //employeeOfTheMonth.firstName = "Tupac";
@@ -106,7 +125,4 @@ int main()
     //employeeOfTheMonth.lastName = "Shakur";
     //employeeOfTheMonth.salary = 8'675'309.01; 
 
-
-
-    std::cout << "Hello World!\n";
 }
