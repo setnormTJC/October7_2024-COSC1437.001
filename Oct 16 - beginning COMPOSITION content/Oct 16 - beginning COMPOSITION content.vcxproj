@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{55cadf10-c2a2-47e2-ae7f-15d619db62d8}</ProjectGuid>
-    <RootNamespace>October14</RootNamespace>
+    <ProjectGuid>{dad7de36-1d79-43e7-9d23-4960d5444b93}</ProjectGuid>
+    <RootNamespace>Oct16beginningCOMPOSITIONcontent</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>October14 - more inheritance stuff</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="October14 - more inheritance stuff.cpp" />
+    <ClCompile Include="Oct 16 - beginning COMPOSITION content.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

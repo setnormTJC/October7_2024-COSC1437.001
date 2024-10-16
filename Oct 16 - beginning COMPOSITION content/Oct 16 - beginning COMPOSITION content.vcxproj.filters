@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="October14 - more inheritance stuff.cpp">
+    <ClCompile Include="Oct 16 - beginning COMPOSITION content.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
